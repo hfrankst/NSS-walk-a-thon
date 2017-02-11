@@ -7,5 +7,6 @@ var Donor = (function(moneyDonor){
 
 
 	//the addDonor method will be here and this will be how the info gets put into the info object. 
+	moneyDonor.addDonor()
 
 })(Donor || {});
