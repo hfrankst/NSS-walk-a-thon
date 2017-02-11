@@ -3,10 +3,12 @@
 var Donor = (function(moneyDonor){
 	var info = {};
 
-	//the donor info function will go here; this will be the getInfo function, getting the info from 
+	//the donor info function will go here; this will be the getInfo function, getting the info from the input forms
 
 
 	//the addDonor method will be here and this will be how the info gets put into the info object. 
-	moneyDonor.addDonor()
 
 })(Donor || {});
+
+
+moneyDonor.addDonor()
