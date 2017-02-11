@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- these three meta tags are required to go before everything else in the head for Bootstrap to work -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Walk-A-Thon Donations</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<!-- the following is a bootstrap grid form  -->
+<div class="form-container">
+  <form>
+
+    <div class="form-group row"><!-- this div holds the name input -->
+      <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputName" placeholder="Full Name">
+      </div>
+    </div>
+
+    <div class="form-group row"><!-- this div holds the email input -->
+      <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+
+    <div class="form-group row"><!-- this div holds the donation input -->
+      <label for="inputDonation" class="col-sm-2 col-form-label">Pledge Amount</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="inputDonation" placeholder="Pledge Amount">
+      </div>
+    </div>
+
+    <fieldset class="form-group row"><!-- this holds the radio buttons for the donation type -->
+      <legend class="col-form-legend col-sm-2">Donation Type</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            Lump Sum
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            Per Lap
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+    <!-- the div holding the Donate and Cancel buttons -->
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Donate</button>
+        <button type="reset" class="btn btn-primary">Cancel</button><!-- need to make a reset function for this button -->
+      </div>
+    </div>
+  </form>
+</div><!--end of the container div -->
+
+<!-- TABLE STARTS HERE -->
+
+
+<div class="table-container">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped"><!--probably will have to build the table else where and append it to this class -->
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<!-- these two script tags are also required for Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
