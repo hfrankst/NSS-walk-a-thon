@@ -6,7 +6,9 @@ var Donor = (function(moneyDonor){
 	var donateBtn = document.getElementById('donate');
 	var cancelBtn = document.getElementById('cancel');//this listener needs to reset the form
 	
-
+	cancelBtn.addEventListener('click', function(){
+		document.getElementById('myForm').reset();
+	});
 	//the donate button needs to run the getInfo() function from the donorInfo page
 	
 
