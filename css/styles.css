@@ -9,6 +9,7 @@ body {
 
 .table-striped {
 	background-color: darkgrey !important;
+	box-shadow: 5px 5px 3px;
 }
 
 .form-container {
@@ -21,10 +22,14 @@ body {
 
 .form-control {
 	width: 100%;
+	box-shadow: 5px 5px 3px;
 }
 
 .table {
 	width: 100%;
+}
+
+#table-body {
 }
 
 /*.pull-right {
