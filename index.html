@@ -6,42 +6,63 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Walk-A-Thon Donations</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="/lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+	<header>
+		<h1>Donate for the Walk-A-Thon</h1><hr><br>
+		<h4><em>Every Dollar Helps!  ...but seriously, give us money or no one walks..</em></h4>
+	</header>
+
+	<div class="table-container col-md-6">
+	  <h2>Donor Information</h2>
+	  <p>Thank you so much to all of our Supporters!</p>            
+	  <table class="table table-striped"><!--probably will have to build the table else where and append it to this class -->
+	    <thead>
+	      <tr>
+	        <th>Name</th>
+          <th>Email</th>
+	        <th>Pledge</th>
+          <th>Donation Type</th>
+	      </tr>
+	    </thead>
+	    <tbody id="table-body">
+	    </tbody>
+	  </table>
+	</div>
 
 <!-- the following is a bootstrap grid form  -->
-<div class="form-container">
-  <form>
+<div class="form-container col-md-6">
+  <form id="myForm">
 
     <div class="form-group row"><!-- this div holds the name input -->
-      <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
+      <label for="inputName" class="col-sm-6 col-md-8 col-form-label">Full Name</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="inputName" placeholder="Full Name">
       </div>
     </div>
 
     <div class="form-group row"><!-- this div holds the email input -->
-      <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+      <label for="inputEmail" class="col-sm-6 col-form-label">Email</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail" placeholder="Email">
       </div>
     </div>
 
     <div class="form-group row"><!-- this div holds the donation input -->
-      <label for="inputDonation" class="col-sm-2 col-form-label">Pledge Amount</label>
+      <label for="inputDonation" class="col-sm-6 col-form-label">Pledge Amount</label>
       <div class="col-sm-10">
         <input type="number" class="form-control" id="inputDonation" placeholder="Pledge Amount">
       </div>
     </div>
 
     <fieldset class="form-group row"><!-- this holds the radio buttons for the donation type -->
-      <legend class="col-form-legend col-sm-2">Donation Type</legend>
+      <legend class="col-form-legend col-sm-6">Donation Type</legend>
       <div class="col-sm-10">
         <div class="form-check">
           <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
             Lump Sum
           </label>
         </div>
@@ -57,54 +78,21 @@
     </fieldset>
     <!-- the div holding the Donate and Cancel buttons -->
     <div class="form-group row">
-      <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Donate</button>
-        <button type="reset" class="btn btn-primary">Cancel</button><!-- need to make a reset function for this button -->
+      <div class="offset-sm-6 col-sm-10">
+        <button type="button" class="btn btn-primary" id="donate">Donate</button>
+        <button type="reset" class="btn btn-primary" id="cancel">Cancel</button><!-- need to make a reset function for this button -->
       </div>
     </div>
   </form>
 </div><!--end of the container div -->
 
-<!-- TABLE STARTS HERE -->
-
-
-<div class="table-container">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>            
-  <table class="table table-striped"><!--probably will have to build the table else where and append it to this class -->
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
 
 
-
-
-<!-- these two script tags are also required for Bootstrap -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<!-- these two script tags are also required for Bootstrap. The first is to get the jquery library that bootstrap needs to work-->
+	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="/lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/switchBoard.js"></script>
+  <script type="text/javascript" src="js/donorInfo.js"></script>
 </body>
 </html>

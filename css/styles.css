@@ -1,9 +1,45 @@
-
+*{
+	/*border: 1px solid red;*/
+}
 body {
 	/*border:  	1px solid black;*/
 	background-color: lightblue;
+	padding: 3px;
+}
+
+h1 {
+	text-shadow: 1px 1px .5px black;
 }
 
 .table-striped {
 	background-color: darkgrey !important;
+	box-shadow: 5px 5px 3px;
 }
+
+.form-container {
+	display: inline-block;
+}
+
+.table-container {
+	display: inline-block;
+}
+
+.form-control {
+	width: 100%;
+	box-shadow: 5px 5px 3px;
+}
+
+.table {
+	width: 100%;
+}
+
+#table-body {
+}
+
+/*.pull-right {
+	text-align: left;
+}
+
+.pull-left {
+	text-align: justify;
+}*/
